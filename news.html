@@ -5,7 +5,102 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>News from NACEDA</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/email.css" />
+
+  <!-- CSS has to be included here or it won't work -->
+    <style>
+      /* GLOBAL*/
+      * { margin:0;padding:0; font-family: Tahoma, Verdana, sans-serif; color: #424143; }
+      img { max-width: 100%; }
+      .collapse { margin:0 !important; padding:0; }
+      body { -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none; width: 100%!important; height: 100%; }
+
+      /* ELEMENTS & TYPOGRAPHY */
+      h1,h2,h3,h4,h5,h6 { font-family: Tahoma, Verdana, sans-serif; line-height: 1.3; margin-bottom:14px; }
+      h1 { font-weight:500; font-size: 32px; text-transform: uppercase; }
+      h2 { font-weight:700; font-size: 24px; text-transform: none; color: #085694; }
+      h3 { font-weight:700; font-size: 16px; margin-top: 28px; }
+      h4 { font-weight:500; font-size: 18px;}
+      h5 { font-weight:900; font-size: 16px;}
+      h6 { font-weight:900; font-size: 14px; text-transform: uppercase; color:#444;}
+
+      p, ul { margin-bottom: 14px; font-weight: normal; font-size:14px; line-height:1.6; }
+      p.callout { padding:15px; background: #ebebeb; margin-bottom: 15px; }
+      p.lead { font-size:17px; }
+      p.last { margin-bottom:0px;}
+      ul li { margin-left:5px; list-style-position: inside; }
+
+      a { color: #085694; font-weight: 700; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      .btn {
+        text-decoration:none;
+        color: #FFF;
+        background-color: #085694;
+        padding:10px 16px;
+        font-weight:bold;
+        margin-right:10px;
+        text-align:center;
+        cursor:pointer;
+        display: inline-block;
+      }
+
+      table.social { background-color: #bdbec0; }
+      .social .soc-btn {
+        padding: 3px 7px;
+        font-size:12px;
+        margin-bottom:10px;
+        text-decoration:none;
+        color: #FFF;font-weight:bold;
+        display:block;
+        text-align:center;
+      }
+      a.fb { background-color: #3B5998!important; }
+      a.tw { background-color: #1daced!important; }
+      a.gp { background-color: #DB4A39!important; }
+      a.ms { background-color: #000!important; }
+
+      /* HEADER */
+      table.head-wrap { width: 100%; border-collapse: collapse; }
+      .green-bar { height: 32px; background-color: #97c940; }
+
+      /* BODY */
+      table.body-wrap { width: 100%;}
+      hr { height: 2px; background-color: #ebc31c; color: #ebc31c; border: none; margin: 30px 0;}
+
+      /* FOOTER */
+      table.footer-wrap { width: 100%;  clear:both!important; }
+      .footer-wrap .container td.content  p { border-top: 1px solid rgb(215,215,215); padding-top:15px;}
+      .footer-wrap .container td.content p { font-size:10px; font-weight: bold; }
+
+      /**** RESPONSIVENESS ******/
+
+      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+      .container { display:block!important; max-width:600px!important; margin:0 auto!important; /* makes it centered */ clear:both!important; }
+
+      /* This should also be a block element, so that it will fill 100% of the .container */
+      .content { padding:15px; max-width:600px; margin:0 auto; display:block; }
+
+      /* Let's make sure tables in the content area are 100% wide */
+      .content table { width: 100%; }
+
+      /* Odds and ends */
+      .column { width: 300px; float:left; }
+      .column tr td { padding: 15px; }
+      .column-wrap { padding:0!important; margin:0 auto; max-width:600px!important; }
+      .column table { width:100%;}
+      .social .column { width: 280px; min-width: 279px; float:left; }
+
+      /* Be sure to place a .clear element after each set of columns, just to be safe */
+      .clear { display: block; clear: both; }
+
+      /* PHONE (For clients that support media queries) */
+      @media only screen and (max-width: 600px) {
+        a[class="btn"] { display:block!important; margin-bottom:10px!important; background-image:none!important; margin-right:0!important;}
+        div[class="column"] { width: auto!important; float:none!important;}
+        table.social div[class="column"] { width:auto!important; }
+      }
+    </style>
+
   </head>
 
   <body bgcolor="#FFFFFF">
@@ -13,7 +108,7 @@
   <!-- HEADER -->
   <table class="head-wrap" bgcolor="#fff">
     <tr>
-      <td class="header-img"><img src="news-header-1.PNG" alt="News from NACEDA"></td>
+      <td class="header-img"><img src="http://www.googledrive.com/host/0B5__RGzJwhprWTJIS3YydFhKZlk" alt="News from NACEDA"></td>
     </tr>
     <tr><td class="green-bar"></td></tr>
 
