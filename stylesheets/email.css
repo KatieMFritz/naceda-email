@@ -77,11 +77,11 @@ a.ms { background-color: #000!important; }
 /* -------------------------------------
 		HEADER
 ------------------------------------- */
-table.head-wrap { width: 100%;}
+table.head-wrap { width: 100%; border-collapse: collapse; }
 
-.header.container table td.logo { padding: 15px; }
-.header.container table td.label { padding: 15px; padding-left:0px;}
+table td.header-img img { width: 100%;}
 
+.green-bar { height: 32px; background-color: #97c940;}
 
 /* -------------------------------------
 		BODY
