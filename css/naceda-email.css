@@ -1,18 +1,18 @@
 body, table.body, h1, h2, h3, h4, h5, h6, p, td  {
   font-family: Tahoma, Verdana, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   color: #424143;
 }
 
-h1 {
-  font-size: 20px;
+h1, .h1 {
+  font-size: 18px;
   font-weight: bold;
   color: #085694;
   margin-bottom: 16px;
   margin-top: 0px;
 }
 
-h2 {
+h2, .h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 10px 0;
@@ -33,12 +33,23 @@ a {
   color: #085694;
 }
 
-hr { height: 2px; background-color: #ebc31c; color: #ebc31c; border: none; margin: 16px 0;}
-
-p {
-  margin: 14px 0;
+a:hover {
+  text-decoration: underline;
 }
 
+hr { height: 2px; background-color: #ebc31c; color: #ebc31c; border: none; margin: 24px 0;}
+
+p {
+  margin: 12px 0;
+}
+
+p.lead {
+  font-size: 16px;
+}
+
+li {
+  margin-bottom: 12px;
+}
 #banner tbody tr td.wrapper {
   padding-top: 0;
 }
@@ -63,3 +74,27 @@ p {
   margin-bottom: 15px;
   border: none;
 }
+
+#social {
+	background-color: #ebebeb;
+  text-align: center;
+}
+
+#social tbody tr td table tr td {
+  padding: 15px;
+}
+
+#social .soc-btn {
+	padding: 3px 7px;
+	font-size:12px;
+	margin-bottom:10px;
+	text-decoration:none;
+	color: #FFF !important;
+  font-weight:bold;
+	display:block;
+	text-align:center;
+}
+
+a.fb { background-color: #3B5998!important; }
+a.tw { background-color: #1daced!important; }
+a.web { background-color: #97c940!important; }
