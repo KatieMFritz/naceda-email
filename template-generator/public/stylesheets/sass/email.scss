@@ -1,0 +1,39 @@
+@import 'vendor/email-boilerplate';
+
+#container {
+  width: 718px;
+
+  td > *:first-child {
+    margin-top: 0;
+  }
+  td > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.banner {
+  width: 718px;
+  height: 140px;
+  background-image: url('/images/banner-general.jpg');
+  background-size: 100% 100%;
+  color: white;
+  text-align: center;
+
+  h1 {
+    font-size: 50px;
+    .small {
+      font-size: 0.6em;
+    }
+  }
+
+  .tagline {}
+}
+
+.sub-banner {
+  width: 100%;
+  background-color: #97CA41;
+
+  td {
+    white-space: nowrap;
+  }
+}
