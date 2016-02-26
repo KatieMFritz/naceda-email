@@ -8,7 +8,7 @@ IMAGE_CLASSES = 'image_link'
 class NacedaEmailTemplateGenerator < Sinatra::Base
 
   get '/' do
-    @files = Dir[File.dirname(__FILE__) + '/views/emails/*'].map do |filename|
+    @files = Dir[File.dirname(__FILE__) + '/views/emails/*.erb'].map do |filename|
       filename.match(/.+\/(\w+)\.erb/)[1]
     end
     erb :home, layout: :'layouts/main'

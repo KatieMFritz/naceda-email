@@ -19,45 +19,56 @@
   <![endif]-->
 
 </head>
+
 <body>
-  <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
-  <tr>
-    <td>
-
-    <table cellpadding="0" cellspacing="0" border="0" align="center" id="container">
-      <tr>
-        <td>
-          <table cellpadding="0" cellspacing="0" border="0" align="center" class="banner">
-            <tr>
-              <td width="225"></td>
-              <td valign="middle">
-                <%= yield_content(:banner_title).strip %>
-              </td>
-            </tr>
-          </table>
-          <table cellpadding="15" cellspacing="0" border="0" align="left" class="sub-banner">
-            <tr>
-              <td valign="top" width="100%">
-                National Alliance of Community Economic Development Associations
-              </td>
-              <td valign="top">
-                <%= yield_content(:current_date).strip %>
-              </td>
-            </tr>
-          </table>
-
-          <table cellpadding="30" cellspacing="0" border="0" align="center" id="container">
-            <tr>
-              <td>
-                <%= yield %>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-    </td>
-  </tr>
+<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0" border="0" align="center" id="container">
+<tr>
+<td>
+<!-- STRIP: Edits can start here -->
+  <!-- STRIP: banner image -->
+  <table cellpadding="0" cellspacing="0" border="0" align="center" class="banner">
+    <tr>
+      <td width="225"></td>
+      <td valign="middle">
+        <%= yield_content(:banner_title).strip %>
+      </td>
+    </tr>
   </table>
+  <!-- STRIP: title bar -->
+  <table cellpadding="15" cellspacing="0" border="0" align="left" class="sub-banner">
+    <tr>
+      <td valign="top" width="100%">
+        National Alliance of Community Economic Development Associations
+      </td>
+      <td valign="top">
+        <%= yield_content(:current_date).strip %>
+      </td>
+    </tr>
+  </table>
+
+  <!-- STRIP: Main content -->
+  <table cellpadding="30" cellspacing="0" border="0" align="center" id="container">
+    <tr>
+      <td>
+        <%= yield %>
+      </td>
+    </tr>
+  </table>
+
+  <!-- STRIP: Social footer -->
+  <table border="0" cellspacing="0" align="center" id="footer">
+    <tr>
+
+    </tr>
+  </table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
 </body>
 </html>
