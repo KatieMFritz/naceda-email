@@ -53,5 +53,15 @@ class NacedaEmailTemplateGenerator < Sinatra::Base
       image_tag source, options
     end
 
+    def hr
+      %(
+        <table class="hr" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+      )
+    end
+
   end
 end

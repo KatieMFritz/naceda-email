@@ -31,10 +31,7 @@
   <!-- STRIP: banner image -->
   <table cellpadding="0" cellspacing="0" border="0" align="center" class="banner">
     <tr>
-      <td width="225"></td>
-      <td valign="middle">
-        <%= yield_content(:banner_title).strip %>
-      </td>
+      <td><img src="<%= yield_content(:banner_image).strip %>" width="718" height="140"></td>
     </tr>
   </table>
   <!-- STRIP: title bar -->
@@ -59,9 +56,14 @@
   </table>
 
   <!-- STRIP: Social footer -->
-  <table border="0" cellspacing="0" align="center" id="footer">
+  <table border="0" cellpadding="20" cellspacing="0" align="center" width="100%" class="footer">
     <tr>
-
+      <td>
+        <h4>Connect with Us:</h4>
+        <!-- STRIP: facebook --><a class="soc-btn fb" title="NACEDA's Facebook page" href="https://www.facebook.com/NACEDA-232725003593519/">Facebook</a>
+        <!-- STRIP: twitter --><a class="soc-btn tw" title="NACEDA on Twitter" href="https://twitter.com/nacedatweets">Twitter</a>
+        <!-- STRIP: website --><a class="soc-btn web" title="NACEDA Website" href="https://naceda.memberclicks.net">Website</a>
+      </td>
     </tr>
   </table>
 </td>

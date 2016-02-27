@@ -1,7 +1,11 @@
 @import 'vendor/email-boilerplate';
+@import 'lib/email-boilerplate.overrides';
+@import 'lib/variables';
+
 
 #container {
   width: 718px;
+  border: 1px solid $gray;
 
   td > *:first-child {
     margin-top: 0;
@@ -12,28 +16,89 @@
 }
 
 .banner {
-  width: 718px;
-  height: 140px;
-  background-image: url('/images/banner-general.jpg');
-  background-size: 100% 100%;
-  color: white;
+  // width: 718px;
+  // height: 140px;
+  // background-image: url('https://naceda.memberclicks.net/assets/images/Email_Banners/naceda_news.jpg');
+  // background-size: 100% 100%;
+  // color: white;
   text-align: center;
-
-  h1 {
-    font-size: 50px;
-    .small {
-      font-size: 0.6em;
-    }
-  }
-
-  .tagline {}
 }
 
 .sub-banner {
   width: 100%;
-  background-color: #97CA41;
+  background-color: $green;
 
   td {
     white-space: nowrap;
   }
+}
+
+h3 {
+  margin-top: 1.8em;
+  margin-bottom: 0;
+}
+
+a {
+  color: $blue;
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
+li {
+  margin-bottom: $margin;
+}
+
+.hr {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  td {
+    line-height: 0;
+    background: none;
+    border-top: 2px solid $yellow;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.panel {
+  background-color: $light-gray;
+  width: 100%;
+  margin: $margin * 4 auto;
+  thead {
+  background-color: $gray;
+  }
+  h4 {
+  color: #fff !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  font-size: 120% !important;
+  }
+  p {
+    margin-top: 0 !important;
+  }
+  .hr {
+    margin-top: 20px;
+    margin-bottom: 20px;;
+  }
+}
+
+.footer {
+	background-color: $gray;
+  text-align: center;
+
+  .soc-btn {
+    padding: 10px;
+  	margin: 10px 10px 30px 10px;
+  	text-decoration:none;
+  	color: #FFF !important;
+    display: inline-block;
+  	text-align:center;
+  }
+
+  a.fb { background-color: #3B5998!important; }
+  a.tw { background-color: #1daced!important; }
+  a.web { background-color: #97c940!important; }
 }
