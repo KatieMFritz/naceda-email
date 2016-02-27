@@ -184,6 +184,10 @@ h4 {
   #container td > *:last-child {
     margin-bottom: 0; }
 
+.hidden {
+  display: none !important;
+  visibility: hidden !important; }
+
 .banner {
   text-align: center; }
 
@@ -201,6 +205,8 @@ a {
   color: #085694;
   text-decoration: none !important;
   font-weight: bold !important; }
+  a:hover {
+    text-decoration: underline !important; }
 
 li {
   margin-bottom: 10px; }
@@ -226,13 +232,30 @@ li {
   .panel h4 {
     color: #fff !important;
     margin: 0px !important;
-    padding: 0px !important;
+    padding: 0px 0px 0px 10px !important;
     font-size: 120% !important; }
   .panel p {
-    margin-top: 0 !important; }
+    margin-top: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important; }
   .panel .hr {
     margin-top: 20px;
     margin-bottom: 20px; }
+    .panel .hr td {
+      border-top: 1px solid #ebc31c; }
+
+.button {
+  background-color: #97CA41;
+  border: 2px solid #7ca92f;
+  border-radius: 5px;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 44px;
+  text-align: center;
+  width: 300px;
+  margin: 10px auto;
+  -webkit-text-size-adjust: none;
+  mso-hide: all; }
 
 .footer {
   background-color: #bdbec0;

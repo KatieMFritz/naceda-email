@@ -15,6 +15,11 @@
   }
 }
 
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 .banner {
   // width: 718px;
   // height: 140px;
@@ -42,6 +47,9 @@ a {
   color: $blue;
   text-decoration: none !important;
   font-weight: bold !important;
+  &:hover {
+    text-decoration: underline !important;
+  }
 }
 
 li {
@@ -73,16 +81,35 @@ li {
   h4 {
   color: #fff !important;
   margin: 0px !important;
-  padding: 0px !important;
+  padding: 0px 0px 0px 10px !important;
   font-size: 120% !important;
   }
   p {
     margin-top: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
   .hr {
     margin-top: 20px;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
+    td {
+      border-top: 1px solid $yellow;
+    }
   }
+}
+
+.button {
+  background-color: $green;
+  border: 2px solid darken($green, 10%);
+  border-radius: $border-radius;
+  color:#ffffff;
+  display:inline-block;
+  line-height:44px;
+  text-align:center;
+  width:300px;
+  margin: 10px auto;
+  -webkit-text-size-adjust:none;
+  mso-hide:all;
 }
 
 .footer {
