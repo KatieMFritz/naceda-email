@@ -177,12 +177,17 @@ h4 {
   color: #424143 !important; }
 
 #container {
-  width: 718px;
+  width: 600px;
   border: 1px solid #bdbec0; }
   #container td > *:first-child {
     margin-top: 0; }
   #container td > *:last-child {
     margin-bottom: 0; }
+  #container td > *:last-child {
+    margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
 
 .hidden {
   display: none !important;
@@ -194,7 +199,7 @@ h4 {
 .sub-banner {
   width: 100%;
   background-color: #97CA41; }
-  .sub-banner td {
+  .sub-banner td:last-child {
     white-space: nowrap; }
 
 h3 {
