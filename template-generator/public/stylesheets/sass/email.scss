@@ -45,8 +45,6 @@ h3 {
 
 a {
   color: $blue;
-  text-decoration: none !important;
-  font-weight: bold !important;
   &:hover {
     text-decoration: underline !important;
   }
@@ -58,8 +56,8 @@ li {
 
 .hr {
   width: 100%;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: $margin * 2;
+  margin-bottom: $margin * 2;
 
   td {
     line-height: 0;
@@ -74,7 +72,7 @@ li {
 .panel {
   background-color: $light-gray;
   width: 100%;
-  margin: $margin * 4 auto;
+  margin: $margin * 2 auto $margin ;
   thead {
   background-color: $gray;
   }
@@ -90,8 +88,8 @@ li {
     padding-right: 10px !important;
   }
   .hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: $margin * 2;
+    margin-bottom: $margin * 2;
     td {
       border-top: 1px solid $yellow;
     }
@@ -103,6 +101,8 @@ li {
   border: 2px solid darken($green, 10%);
   border-radius: $border-radius;
   color:#ffffff;
+  text-decoration: none !important;
+  font-weight: 700;
   display:inline-block;
   line-height:44px;
   text-align:center;
