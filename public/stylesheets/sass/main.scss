@@ -2,31 +2,37 @@
 BOOTSTRAP VARIABLES
 http://getbootstrap.com/customize/#less-variables
 ***********************************/
+@import 'lib/variables';
+
+// Colors
+$gray-base: $gray;
+$gray-darker: $dark-gray;
+$gray-dark: $dark-gray;
+$gray-light: $light-gray;
+$brand-primary: $blue;
+$brand-success: $green;
+$brand-info: $yellow;
+$brand-warning: red;
+$brand-danger: red;
+
+// Typography
+$font-family-sans-serif: Tahoma, Arial, sans-serif;
+$headings-font-weight: 700;
+
+// Buttons
+$btn-font-weight: bold;
+
+// Navbar
+$navbar-default-bg: $blue;
+$navbar-default-link-color: white;
+$navbar-default-link-active-color: $green;
+$navbar-default-link-hover-color: $green;
+
 
 /****************************
 IMPORT BOOTSTRAP
 *****************************/
 @import 'bootstrap';
-@import 'lib/variables';
-
-body {
-  font-family: Tahoma, Arial, sans-serif;
-  max-width: 1200px;
-  margin: 10px auto;
-  color: $dark-gray;
-}
-
-h1 {
-  color: $blue;
-}
-
-h2 {
-  color: $green;
-}
-
-a {
-  color: $blue;
-}
 
 // Flexbox setup
 .row {
@@ -47,25 +53,21 @@ iframe {
 
 .instructions {
   font-size: 1.2em;
-  color: red;
+  color: $brand-warning;
 }
 
-textarea[disabled], input[disabled] {
-  background-color: $light-gray;
+// textarea[disabled], input[disabled] {
+//   background-color: $light-gray;
+// }
+
+button, .btn {
+  a, a:hover {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 form {
-  min-width: 800px;
-  fieldset {
-    margin: 10px auto;
-    padding: 10px;
-    border: 3px solid $green;
-    legend {
-      color: $green;
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-  }
   .column {
     textarea {
       min-width: 400px;
@@ -75,26 +77,49 @@ form {
       min-width: 300px;
     }
   }
-  button {
-    font-size: 1.5em;
-    padding: 10px;
-    border-radius: $border-radius;
-    background-color: $blue;
-    color: white;
-    &:hover {
-      background-color: lighten($blue, 10%);
-    }
-    a {
-      text-decoration: none;
-      color: white;
-    }
+}
+
+.panel-default > .panel-heading {
+  background-color: $green;
+  a:after {
+    font-family:'Glyphicons Halflings';
+    content:"\e114";
+    float: right;
+    //color: $gray;
   }
+  a.collapsed:after {
+    content:"\e080";
+  }
+}
+
+textarea[disabled] {
+  background-color: $light-gray;
 }
 
 #url {
   width: 100%;
 }
 
-footer {
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 80px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
   background-color: $light-gray;
+  margin-top: 20px;
+  .container {
+    padding: 20px;
+    text-align: center;
+  }
 }

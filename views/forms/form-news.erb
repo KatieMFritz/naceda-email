@@ -3,60 +3,105 @@
 <% end %>
 
 <% content_for :page_header do %>
-  <p class="instructions">Paste your text in each field as HTML. Make sure there are no span tags or other weird formatting things.</p>
+  <div class="alert alert-info" role="alert">
+    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+    <strong>Instructions:</strong> Paste your text in each field as HTML. Make sure there are no span tags or other weird formatting things.
+  </div>
+  <div class="alert alert-warning alert-dismissible hidden-first" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+    <strong>Important:</strong> Your inputs have been saved to this URL. Bookmark this page or copy and paste the URL to pick up where you left off.</p>
+    <textarea disabled rows="3" id="url">/form-news?<%= URI.encode_www_form(params) %></textarea>
+    <button class="btn btn-primary"><a href="/templates/news?<%= URI.encode_www_form(params) %>">
+      Step 2: Preview and get code
+      <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+    </button>
+  </div>
+
 <% end %>
 
-<main>
-  <form action="/form-news">
-    <fieldset>
-      <legend>General Email Information</legend>
-      <div class="row">
-        <%= textbox "Email Date", "date" %>
-        <%= textbox "Teaser Text", "teaser_text" %>
-      </div>
-      <div class="row">
-        <%= textbox "Subject Line", "subject" %>
-        <%= textbox "Author", "author" %>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>News</legend>
-      <div class="row">
-        <%= textarea "NACEDA News", "naceda-news" %>
-        <%= textarea "Member News", "member-news" %>
-      </div>
-      <div class="row">
-        <%= textarea "Federal News", "federal-news" %>
-        <%= textarea "Partner News", "partner-news" %>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Events</legend>
-      <div class="row">
-        <%= textarea "NACEDA Events", "naceda-events" %>
-        <%= textarea "Member Events", "member-events" %>
-      </div>
-      <div class="row">
-        <%= textarea "Federal Events", "federal-events" %>
-        <%= textarea "Partner Events", "partner-events" %>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Other</legend>
-      <div class="row">
-        <%= textarea "Job Openings", "jobs" %>
-      </div>
-    </fieldset>
-    <fieldset>
-      <button type="submit">Step 1: Save</button>
-      <p class="instructions"><strong>Important:</strong> Come back to this exact same URL to pick up where you left off. Your answers have been saved <em>in the URL</em>.</p>
-      <textarea disabled rows="5" id="url">/form-news?<%= URI.encode_www_form(params) %></textarea>
-    </fieldset>
-    <fieldset>
-      <button><a href="/templates/news?<%= URI.encode_www_form(params) %>">Step 2: Preview and get code</a></button>
-    </fieldset>
-  </form>
-</main>
+<form action="/form-news">
+  <div class="panel-group" id="accordion">
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script> -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-target="#collapseGeneral" href="#collapseGeneral">
+            General Email Information</a></h4>
+      </div>
+      <div id="collapseGeneral" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <div class="row">
+            <%= textbox "Email Date", "date" %>
+            <%= textbox "Teaser Text", "teaser_text" %>
+          </div>
+          <div class="row">
+            <%= textbox "Subject Line", "subject" %>
+            <%= textbox "Author", "author" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-target="#collapseNews" href="#collapseNews">
+            News</a></h4>
+      </div>
+      <div id="collapseNews" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <div class="row">
+            <%= textarea "NACEDA News", "naceda-news" %>
+            <%= textarea "Member News", "member-news" %>
+          </div>
+          <div class="row">
+            <%= textarea "Federal News", "federal-news" %>
+            <%= textarea "Partner News", "partner-news" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-target="#collapseEvents" href="#collapseEvents">
+            Events</a></h4>
+      </div>
+      <div id="collapseEvents" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <div class="row">
+            <%= textarea "NACEDA Events", "naceda-events" %>
+            <%= textarea "Member Events", "member-events" %>
+          </div>
+          <div class="row">
+            <%= textarea "Federal Events", "federal-events" %>
+            <%= textarea "Partner Events", "partner-events" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-target="#collapseOther" href="#collapseOther">
+            Other</a></h4>
+      </div>
+      <div id="collapseOther" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <div class="row">
+            <%= textarea "Job Openings", "jobs" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end panel-group #accordion -->
+
+  <div class="panel">
+    <button type="submit" class="btn btn-primary">Step 1: Save</button>
+  </div>
+
+</form>
