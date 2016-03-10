@@ -1,5 +1,7 @@
 body {
   font-family: Tahoma, Arial, sans-serif;
+  max-width: 1200px;
+  margin: 10px auto;
 }
 
 .row {
@@ -14,4 +16,10 @@ body {
 iframe {
   width: 100%;
   height: 1200px;
+}
+
+form {
+  .column {
+    width: auto;
+  }
 }

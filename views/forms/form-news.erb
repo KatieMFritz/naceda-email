@@ -2,38 +2,49 @@
   Create a Newsletter
 <% end %>
 
+<% content_for :page_header do %>
+  <p class="instructions">Paste your text in each field as HTML. Make sure there are no span tags or other weird formatting things.</p>
+<% end %>
+
 <main>
   <form action="/form-news">
     <fieldset>
       <legend>General Email Information</legend>
-      <label for="date">Email Date: </label><input type="text" name="date" value="<%= params['date'] %>">
-      <label for="teaser_text">Teaser Text:</label><input type="text" name="teaser_text" value="<%= params['teaser_text'] %>">
+      <div class="row">
+        <%= textbox "Email Date", "date" %>
+        <%= textbox "Teaser Text", "teaser_text" %>
+        <%= textbox "Subject Line", "subject" %>
+        <%= textbox "Author", "author" %>
+      </div>
     </fieldset>
     <fieldset>
       <legend>News</legend>
-      <p class="instructions">Paste in your formatted html, including h3 for headlines, a for links, ul or ol for lists, p for paragraphs, etc.</p>
-      <%= textarea "NACEDA News", "naceda-news" %>
-      <label for="member-news">Member News: </label><textarea name="member-news" value="<%= params['member-news'] %>"></textarea>
-      <label for="federal-news">Federal News: </label><textarea name="federal-news" value="<%= params['federal-news'] %>"></textarea>
-      <label for="partner-news">Partner News: </label><textarea name="partner-news" value="<%= params['partner-news'] %>"></textarea>
+      <div class="row">
+        <%= textarea "NACEDA News", "naceda-news" %>
+        <%= textarea "Member News", "member-news" %>
+        <%= textarea "Federal News", "federal-news" %>
+        <%= textarea "Partner News", "partner-news" %>
+      </div>
     </fieldset>
     <fieldset>
       <legend>Events</legend>
-      <p class="instructions">Paste in your formatted html.</p>
-      <label for="naceda-events">NACEDA Events: </label><textarea name="naceda-events"></textarea>
-      <label for="member-events">Member Events: </label><textarea name="member-events"></textarea>
-      <label for="federal-events">Federal Events: </label><textarea name="federal-events"></textarea>
-      <label for="partner-events">Partner Events: </label><textarea name="partner-events"></textarea>
+      <div class="row">
+        <%= textarea "NACEDA Events", "naceda-events" %>
+        <%= textarea "Member Events", "member-events" %>
+        <%= textarea "Federal Events", "federal-events" %>
+        <%= textarea "Partner Events", "partner-events" %>
+      </div>
     </fieldset>
     <fieldset>
       <legend>Other</legend>
-      <p class="instructions">Paste in your formatted html.</p>
-      <label for="jobs">Job Openings:</label><textarea name="jobs" value="<%= params['jobs'] %>"></textarea>
+      <div class="row">
+        <%= textarea "Job Openings", "jobs" %>
+      </div>
     </fieldset>
     <fieldset>
       <button type="submit">Save for later</button>
-      <p><strong>Important:</strong> Come back to this exact same URL to pick up where you left off. Your answers have been saved <em>in the URL</em>.</p>
-      <textarea disabled cols="150" rows="5">/form-news?<%= URI.encode_www_form(params) %></textarea>
+      <p class="instructions"><strong>Important:</strong> Come back to this exact same URL to pick up where you left off. Your answers have been saved <em>in the URL</em>.</p>
+      <textarea disabled rows="5">/form-news?<%= URI.encode_www_form(params) %></textarea>
     </fieldset>
     <fieldset>
       <button><a href="/templates/news?<%= URI.encode_www_form(params) %>">Preview and get code</a></button>
