@@ -63,20 +63,11 @@ class NacedaEmailTemplateGenerator < Sinatra::Base
     end
 
     def textarea label, parameter
-      placeholder =
-%(<h3>Headline</h3>
-<p>This is a paragraph that includes <a href='http://url.com'>a link</a> and <strong>bold text</strong>.</p>
-<hr>
-<ul>
-  <li>This is</li>
-  <li>a bulleted list</li>
-</ul>
-      )
       %(
         <div class="column">
           <label for="#{parameter}">#{label}:</label>
           <br>
-          <textarea name="#{parameter}" rows="10" placeholder="#{placeholder}">#{params[parameter]}</textarea>
+          <textarea name="#{parameter}" class="editor">#{params[parameter]}</textarea>
         </div>
       )
     end
