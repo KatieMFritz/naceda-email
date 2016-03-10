@@ -9,14 +9,14 @@ class NacedaEmailTemplateGenerator < Sinatra::Base
 
   get '/' do
     @files = Dir[File.dirname(__FILE__) + '/views/emails/*.erb'].map do |filename|
-      filename.match(/.+\/(\w+)\.erb/)[1]
+      filename.match(/.+\/([\w-]+)\.erb/)[1]
     end
     erb :home, layout: :'layouts/main'
   end
 
   get '/templates/:template' do
     @raw = CGI.escapeHTML emailify(params[:template])
-    @preview_url = "/templates/#{params[:template]}/preview"
+    @preview_url = "/templates/#{params[:template]}/preview?#{URI.encode_www_form(params)}"
     erb :template, layout: :'layouts/main'
   end
 
