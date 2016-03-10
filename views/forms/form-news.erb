@@ -13,6 +13,8 @@
       <div class="row">
         <%= textbox "Email Date", "date" %>
         <%= textbox "Teaser Text", "teaser_text" %>
+      </div>
+      <div class="row">
         <%= textbox "Subject Line", "subject" %>
         <%= textbox "Author", "author" %>
       </div>
@@ -22,6 +24,8 @@
       <div class="row">
         <%= textarea "NACEDA News", "naceda-news" %>
         <%= textarea "Member News", "member-news" %>
+      </div>
+      <div class="row">
         <%= textarea "Federal News", "federal-news" %>
         <%= textarea "Partner News", "partner-news" %>
       </div>
@@ -31,6 +35,8 @@
       <div class="row">
         <%= textarea "NACEDA Events", "naceda-events" %>
         <%= textarea "Member Events", "member-events" %>
+      </div>
+      <div class="row">
         <%= textarea "Federal Events", "federal-events" %>
         <%= textarea "Partner Events", "partner-events" %>
       </div>
@@ -44,7 +50,7 @@
     <fieldset>
       <button type="submit">Save for later</button>
       <p class="instructions"><strong>Important:</strong> Come back to this exact same URL to pick up where you left off. Your answers have been saved <em>in the URL</em>.</p>
-      <textarea disabled rows="5">/form-news?<%= URI.encode_www_form(params) %></textarea>
+      <textarea disabled rows="5" id="url">/form-news?<%= URI.encode_www_form(params) %></textarea>
     </fieldset>
     <fieldset>
       <button><a href="/templates/news?<%= URI.encode_www_form(params) %>">Preview and get code</a></button>

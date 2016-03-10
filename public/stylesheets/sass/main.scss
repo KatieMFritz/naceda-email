@@ -1,9 +1,17 @@
+@import 'lib/variables';
+
 body {
   font-family: Tahoma, Arial, sans-serif;
   max-width: 1200px;
   margin: 10px auto;
+  color: $dark-gray;
 }
 
+a {
+  color: $blue;
+}
+
+// Flexbox setup
 .row {
   display: flex;
 }
@@ -18,8 +26,48 @@ iframe {
   height: 1200px;
 }
 
+.instructions {
+  font-size: 1.2em;
+  color: red;
+}
+
 form {
-  .column {
-    width: auto;
+  min-width: 800px;
+  fieldset {
+    margin: 10px auto;
+    padding: 10px;
+    border: 3px solid $green;
+    legend {
+      color: $green;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
   }
+  .column {
+    textarea {
+      min-width: 400px;
+      vertical-align: top;
+    }
+    input[type="text"] {
+      min-width: 300px;
+    }
+  }
+  button {
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: $border-radius;
+    background-color: $blue;
+    color: white;
+    &:hover {
+      background-color: lighten($blue, 10%);
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+#url {
+  width: 100%;
 }

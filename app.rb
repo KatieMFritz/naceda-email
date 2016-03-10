@@ -65,10 +65,9 @@ class NacedaEmailTemplateGenerator < Sinatra::Base
     def textarea label, parameter
       %(
         <div class="column">
-          <label>#{label}:
-            <textarea name="#{parameter}"  rows="10">#{params[parameter]}
-            </textarea>
-          </label>
+          <label for="#{parameter}">#{label}:</label>
+          <br>
+          <textarea name="#{parameter}"  rows="10">#{params[parameter]}</textarea>
         </div>
       )
     end
