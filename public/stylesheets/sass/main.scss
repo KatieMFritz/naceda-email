@@ -4,6 +4,15 @@ http://getbootstrap.com/customize/#less-variables
 ***********************************/
 @import 'lib/variables';
 
+// Media Queries Breakpoints
+$screen-lg: 1300px;
+
+// Grid System
+$grid-gutter-width: 30px;
+
+// Container Sizes
+$container-large-desktop: (1200px + $grid-gutter-width);
+
 // Colors
 $gray-base: $gray;
 $gray-darker: $dark-gray;
@@ -45,9 +54,14 @@ IMPORT BOOTSTRAP
   padding: 10px;
 }
 
-iframe {
+#preview iframe {
   width: 100%;
   min-width: 600px;
+  height: 1100px;
+}
+
+#code textarea {
+  width: 100%;
   height: 1200px;
 }
 
@@ -60,10 +74,12 @@ iframe {
 //   background-color: $light-gray;
 // }
 
-button, .btn {
-  a, a:hover {
-    text-decoration: none;
-    color: white;
+.panel, .alert {
+  button, .btn {
+    a, a:hover {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 

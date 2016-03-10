@@ -91,6 +91,14 @@ class NacedaEmailTemplateGenerator < Sinatra::Base
       )
     end
 
+    def hidden_class
+      if params.values.any? { |val| !val.empty? }
+        ''
+      else
+        'hidden'
+      end
+    end
+
     def hr
       %(
         <table class="hr" cellpadding="0" cellspacing="0" border="0">

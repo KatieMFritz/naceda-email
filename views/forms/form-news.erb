@@ -7,7 +7,7 @@
     <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
     <strong>Instructions:</strong> Paste your text in each field as HTML. Make sure there are no span tags or other weird formatting things.
   </div>
-  <div class="alert alert-warning alert-dismissible hidden-first" role="alert">
+  <div class="alert alert-warning alert-dismissible <%= hidden_class %>" id="url-alert" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
     <strong>Important:</strong> Your inputs have been saved to this URL. Bookmark this page or copy and paste the URL to pick up where you left off.</p>
@@ -101,7 +101,11 @@
   </div><!-- end panel-group #accordion -->
 
   <div class="panel">
-    <button type="submit" class="btn btn-primary">Step 1: Save</button>
+    <button type="submit" class="btn btn-primary" id="save-form" >Step 1: Save</button>
   </div>
 
 </form>
+
+<script type="text/javascript">
+
+</script>

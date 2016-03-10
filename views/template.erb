@@ -1,7 +1,10 @@
 <div class="row">
   <div id="preview" class="column">
     <h2>Preview</h2>
-    <p class="instructions">To make changes, <a href="/form-<%= params[:template] %>?<%= URI.encode_www_form(params) %>">go back to your form</a>.</p>
+    <div class="alert alert-info" role="alert">
+      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      To make changes, <a href="/form-<%= params[:template] %>?<%= URI.encode_www_form(params) %>">go back to your form</a>.
+    </div>
     <ul>
       <li><strong>Subject:</strong> <%= params[:subject] %></li>
       <li><strong>Author:</strong> <%= params[:author] %></li>
@@ -11,7 +14,10 @@
   </div>
   <div id="code" class="column">
     <h2>Code</h2>
-    <p class="instructions">Click anywhere in the code, Ctrl+A to select all, Ctrl+C to copy to clipboard.</p>
-    <textarea disabled cols="80" rows="80"><%= @raw %></textarea>
+    <div class="alert alert-info" role="alert">
+      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      Click anywhere in the code, Ctrl+A to select all, Ctrl+C to copy to clipboard.
+    </div>
+    <textarea disabled><%= @raw %></textarea>
   </div>
 </div>
