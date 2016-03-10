@@ -1,35 +1,45 @@
-<h2>Create a Newsletter</h2>
-<form action="/templates/news">
-  <fieldset>
-    <legend>General Email Information</legend>
-    <label for="date">Email Date: </label><input type="text" name="date" value="<%= params['date'] %>">
-    <label for="teaser_text">Teaser Text:</label><input type="text" name="teaser_text" value="<%= params['teaser_text'] %>">
-  </fieldset>
-  <fieldset>
-    <legend>News</legend>
-    <p class="instructions">Paste in your formatted html, including h3 for headlines, a for links, ul or ol for lists, p for paragraphs, etc.</p>
-    <label for="naceda-news">NACEDA News: </label><textarea name="naceda-news" value="<%= params['naceda-news'] %>"></textarea>
-    <label for="member-news">Member News: </label><textarea name="member-news" value="<%= params['member-news'] %>"></textarea>
-    <label for="federal-news">Federal News: </label><textarea name="federal-news" value="<%= params['federal-news'] %>"></textarea>
-    <label for="partner-news">Partner News: </label><textarea name="partner-news" value="<%= params['partner-news'] %>"></textarea>
-  </fieldset>
-  <fieldset>
-    <legend>Events</legend>
-    <p class="instructions">Paste in your formatted html.</p>
-    <label for="naceda-events">NACEDA Events: </label><textarea name="naceda-events"></textarea>
-    <label for="member-events">Member Events: </label><textarea name="member-events"></textarea>
-    <label for="federal-events">Federal Events: </label><textarea name="federal-events"></textarea>
-    <label for="partner-events">Partner Events: </label><textarea name="partner-events"></textarea>
-  </fieldset>
-  <fieldset>
-    <legend>Other</legend>
-    <p class="instructions">Paste in your formatted html.</p>
-    <label for="jobs">Job Openings:</label><textarea name="jobs" value="<%= params['jobs'] %>"></textarea>
-  </fieldset>
-  <button type="submit">Make my email!</button>
-</form>
+<% content_for :page_title do %>
+  Create a Newsletter
+<% end %>
 
-<h3>Need to come back later?</h3>
-<p class="instructions">Click the button below and bookmark the resulting URL.</p>
-<button type="button" name="url">Save my URL</button>
-/form?teaser_text=hello
+<main>
+  <form action="/form-news">
+    <fieldset>
+      <legend>General Email Information</legend>
+      <label for="date">Email Date: </label><input type="text" name="date" value="<%= params['date'] %>">
+      <label for="teaser_text">Teaser Text:</label><input type="text" name="teaser_text" value="<%= params['teaser_text'] %>">
+    </fieldset>
+    <fieldset>
+      <legend>News</legend>
+      <p class="instructions">Paste in your formatted html, including h3 for headlines, a for links, ul or ol for lists, p for paragraphs, etc.</p>
+      <%= textarea "NACEDA News", "naceda-news" %>
+      <label for="member-news">Member News: </label><textarea name="member-news" value="<%= params['member-news'] %>"></textarea>
+      <label for="federal-news">Federal News: </label><textarea name="federal-news" value="<%= params['federal-news'] %>"></textarea>
+      <label for="partner-news">Partner News: </label><textarea name="partner-news" value="<%= params['partner-news'] %>"></textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Events</legend>
+      <p class="instructions">Paste in your formatted html.</p>
+      <label for="naceda-events">NACEDA Events: </label><textarea name="naceda-events"></textarea>
+      <label for="member-events">Member Events: </label><textarea name="member-events"></textarea>
+      <label for="federal-events">Federal Events: </label><textarea name="federal-events"></textarea>
+      <label for="partner-events">Partner Events: </label><textarea name="partner-events"></textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Other</legend>
+      <p class="instructions">Paste in your formatted html.</p>
+      <label for="jobs">Job Openings:</label><textarea name="jobs" value="<%= params['jobs'] %>"></textarea>
+    </fieldset>
+    <fieldset>
+      <button type="submit">Save for later</button>
+      <p><strong>Important:</strong> Come back to this exact same URL to pick up where you left off. Your answers have been saved <em>in the URL</em>.</p>
+      <textarea disabled cols="150" rows="5">/form-news?<%= URI.encode_www_form(params) %></textarea>
+    </fieldset>
+    <fieldset>
+      <button><a href="/templates/news?<%= URI.encode_www_form(params) %>">Preview and get code</a></button>
+    </fieldset>
+  </form>
+</main>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script> -->

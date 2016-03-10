@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Generated Code</title>
-  </head>
-  <body>
+<div class="row">
+  <div id="preview" class="column">
     <h2>Preview</h2>
+    <p class="instructions">To make changes, <a href="/form-<%= params[:template] %>?<%= URI.encode_www_form(params) %>">go back to your form</a>.</p>
     <iframe src="<%= @preview_url %>"></iframe>
-    <pre><%= @raw %></pre>
-  </body>
-</html>
+  </div>
+  <div id="code" class="column">
+    <h2>Code</h2>
+    <p class="instructions">Click anywhere in the code, Ctrl+A to select all, Ctrl+C to copy to clipboard.</p>
+    <textarea disabled cols="80" rows="80"><%= @raw %></textarea>
+  </div>
+</div>

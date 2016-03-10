@@ -25,7 +25,7 @@ class NacedaEmailTemplateGenerator < Sinatra::Base
   end
 
   get '/form-news' do
-    erb :'/forms/form-news'
+    erb :'/forms/form-news', layout: :'layouts/main'
   end
 
   helpers ActionView::Helpers::AssetTagHelper
@@ -60,6 +60,14 @@ class NacedaEmailTemplateGenerator < Sinatra::Base
 
     def param_exists? parameter
       params[parameter] && !params[parameter].empty?
+    end
+
+    def textarea label, parameter
+      something = params[parameter]
+      %(
+        <label for="#{parameter}">#{label}:</label>
+        <textarea name="#{parameter}">#{something}</textarea>
+      )
     end
 
     def hr

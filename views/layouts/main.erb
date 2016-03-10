@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="/stylesheets/main.css" charset="utf-8">
   </head>
   <body>
-    <%= yield %>
+    <header>
+      <h1><%= yield_content(:page_title) %></h1>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>Application developed by <a href="http://katiemfritz.com">Katie M Fritz, LLC</a>, 2016. Email content belongs to <a href="http://naceda.org">NACEDA</a>.</p>
+    </footer>
   </body>
 </html>
