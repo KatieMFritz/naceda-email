@@ -50,6 +50,12 @@ h3 {
   margin-bottom: 0;
 }
 
+.subtitle {
+  color: $green !important;
+  font-style: italic;
+  margin-top: .5em;
+}
+
 a {
   color: $blue;
   &:hover {
@@ -99,6 +105,15 @@ li {
     margin-bottom: $margin * 2;
     td {
       border-top: 1px solid $yellow;
+    }
+  }
+  &.blue {
+    thead {
+      background-color: $blue !important;
+    }
+    h4 {
+      background-color: $blue;
+      text-transform: uppercase;
     }
   }
 }

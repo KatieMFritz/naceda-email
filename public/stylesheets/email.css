@@ -206,6 +206,11 @@ h3 {
   margin-top: 1.8em;
   margin-bottom: 0; }
 
+.subtitle {
+  color: #97CA41 !important;
+  font-style: italic;
+  margin-top: .5em; }
+
 a {
   color: #085694; }
   a:hover {
@@ -246,6 +251,11 @@ li {
     margin-bottom: 20px; }
     .panel .hr td {
       border-top: 1px solid #ebc31c; }
+  .panel.blue thead {
+    background-color: #085694 !important; }
+  .panel.blue h4 {
+    background-color: #085694;
+    text-transform: uppercase; }
 
 .button {
   background-color: #97CA41;

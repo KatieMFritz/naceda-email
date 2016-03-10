@@ -24,6 +24,10 @@ class NacedaEmailTemplateGenerator < Sinatra::Base
     emailify params[:template]
   end
 
+  get '/form-news' do
+    erb :'/forms/form-news'
+  end
+
   helpers ActionView::Helpers::AssetTagHelper
   helpers Sinatra::ContentFor
   helpers do
@@ -52,6 +56,10 @@ class NacedaEmailTemplateGenerator < Sinatra::Base
         options[:class] = IMAGE_CLASSES
       end
       image_tag source, options
+    end
+
+    def param_exists? parameter
+      params[parameter] && !params[parameter].empty?
     end
 
     def hr

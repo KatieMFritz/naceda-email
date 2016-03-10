@@ -3,11 +3,15 @@
 <% end %>
 
 <% content_for :teaser_text do %>
-  New website, trainings, and more
+  <%= params['teaser_text'] %>
 <% end %>
 
 <% content_for :banner_image do %>
   https://naceda.memberclicks.net/assets/images/Email_Banners/naceda_news.jpg
+<% end %>
+
+<% content_for :banner_alt do %>
+  NACEDA News
 <% end %>
 
 <% content_for :banner_title do %>
@@ -15,191 +19,126 @@
   <p class="tagline">News You Can Use to Advance Community Prosperity</p>
 <% end %>
 
-<% content_for :current_date do %>
-  February 29, 2016
+<% if param_exists? 'naceda-news' %>
+  <!-- STRIP: Begin NACEDA news -->
+  <h2>NACEDA News</h2>
+  <%= params['naceda-news'] %>
 <% end %>
 
-<!-- STRIP: Begin NACEDA news -->
-<h2>NACEDA News</h2>
+<% if param_exists? 'naceda-events' %>
+  <!-- STRIP: Begin NACEDA Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>NACEDA Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= params['naceda-events'] %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- STRIP: End events panel -->
+  <%= hr %>
+<% end %>
 
-<h3>NACEDA Unveils New Website and New Look</h3>
-<p>Take a look at the new <a href="http://naceda.org">NACEDA website.</a> It's part of a major upgrade to our web platform and member management system that will facilitate better communication between NACEDA members across the country and provide <a href="http://naceda.org/grantstation-info">easier access to GrantStation.</a> We've re-designed our website, newsletters, action alerts and emails to more effectively disseminate information and showcase the community development field.</p>
+<% if param_exists? 'federal-news' %>
+  <!-- STRIP: Begin federal news -->
+  <h2>Federal News</h2>
+  <%= params['federal-news'] %>
+<% end %>
 
-<h3>NACEDA Partners With NDC to Bring Housing Development Finance Series to Mid-Atlantic</h3>
-<p>With support from BB&amp;T, NACEDA has contracted with NDC to provide their full, 17-day <a href="http://naceda.org/NDCtrainings">Housing Development Finance Professional Certification Series</a> in the Mid-Atlantic region in 2016-2017. The series consists of four separate courses, which build on each other. These high-level courses advance participants' capacity to deliver viable and affordable homes &minus; and advance careers. NACEDA is partnering with the Housing Alliance of Pennsylvania, Philadelphia Association of CDCs, Community Development Network of Maryland and the Housing and Community Development Network of New Jersey to offer the courses to their networks. People from outside these networks are welcome to participate. <a href="http://www.naceda.org/NDCtrainings">Registration is open </a>for all classes. <a href="http://www.housingalliancepa.org/node/2395">Watch this webinar</a> to learn how the NDC courses can build your development finance skills.</p>
-
-<!-- STRIP: Begin NACEDA Events Panel -->
-<table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
-  <thead>
-    <tr class="panel-head">
-      <td>
-        <h4>NACEDA Events</h4>
-      </td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <p><a href="http://naceda.org/2016-summit">Save the Date! 9th Annual NACEDA Summit</a><br/>August 29-31 | Cleveland, OH</p>
-        <%= hr %>
-        <p>NDC Housing Development Finance Series:</p>
-        <ul>
-          <li><a href="https://naceda.memberclicks.net/ndctrainings">NDC HD410 − Home Ownership Finance</a> | April 18-21, 2016 | Ewing, NJ</li>
-          <li><a href="https://naceda.memberclicks.net/ndctrainings">NDC HD420 − Rental Housing Development Finance</a> | September 26-30, 2016 | Philadelphia, PA</li>
-          <li><a href="https://naceda.memberclicks.net/ndctrainings">NDC HD422 − Computer Spread Sheet Analysis</a> | April 26-28, 2017 | Baltimore, MD</li>
-          <li><a href="https://naceda.memberclicks.net/ndctrainings">NDC HD430 − Problem Solving and Deal Structuring</a> | October 2-6, 2017 | Southeast PA</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<!-- STRIP: End events panel -->
-
-<%= hr %>
-
-<!-- STRIP: Begin federal news -->
-<h2>Federal News</h2>
-
-<h3>TAKE ACTION &minus; Key Federal Budget Sign-On Letters Close This Week</h3>
-<p>Congress will soon decide how to divide its available spending for FY2017 among the 12 appropriations subcommittees. Then, Congress will shift its focus to specific programs. Three important sign-on letters close this week:</p>
-<ul>
-  <li><a href="http://nlihc.org/issues/budget/302b"> Sign the letter advocating for maximum HUD funding by COB TODAY</a>, February 29.</li>
-  <li><a href="http://salsa3.salsalabs.com/o/50954/p/dia/action3/common/public/?action_KEY=18113">Sign on to preserve HOME funding by TOMORROW</a>, March 1.</li>
-  <li><a href="https://ruralhome.wufoo.com/forms/signon-letter-in-support-of-shop-rcb/">Sign on to preserve SHOP and Rural Capacity Building funding</a> by THURSDAY, March 3. <a href="http://hosted.verticalresponse.com/1191105/a27bdc9f03/548085883/4bd17984ad/">Read the letter.</a></li>
-</ul>
-
-<h3>Treasury Announces Additional $2 Billion Investment In Hardest Hit Fund</h3>
-<p>The Treasury Department will invest an additional $2 billion of Troubled Asset Relief Program (TARP) funds to the Hardest Hit Fund program. The additional funds will enable participating state housing finance agencies to continue assisting struggling homeowners and stabilizing neighborhoods in many of the nation&rsquo;s hardest hit communities. <a href="https://www.treasury.gov/press-center/press-releases/Pages/jl0358.aspx">The first $1 billion in state allocations was announced.</a></p>
-
-<h3>Clinton Announces New Community Development Agenda</h3>
-<p>Hillary Clinton's campaign released an agenda to "revitalize the economy in communities left behind" in the <a href="https://www.hillaryclinton.com/briefing/h/2016-02-12-hillary-clintons-breaking-every-barrier-agenda-revitalizing-the-economy-in-communities-left-behind/">Breaking Every Barrier Agenda</a>. The announcement makes Clinton the first mainstream candidate in the 2016 presidential campaign to include housing as part of his or her policy platform. Clinton&rsquo;s agenda includes an expansion of the Housing Credit and New Markets Tax Credit, reforms to the Section 8 program to help voucher recipients access high-opportunity neighborhoods and housing, and other investments in high-poverty neighborhoods.</p>
-
-<h3>Racial Wealth Gap Highlighted In South Carolina Primary</h3>
-<p>The next President of the United States will have tremendous influence over how and if our country addresses racial wealth disparities. Bernie Mazyck of the South Carolina Association for Community Economic Development and Jeremie Greer of CFED called attention to this critical issue as South Carolina took center stage in the Presidential primary. <a href="http://www.postandcourier.com/article/20160225/PC1002/160229619/1021/dems-should-focus-on-racial-wealth-gap">Read their Op-Ed</a> in Charleston's <em>The Post and Courier</em>. It notes that median net worth of white households in South Carolina is $133,683, while median net worth of black households is $14,413.</p>
-
-<!-- STRIP: Begin Federal Events Panel -->
-<table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
-  <thead>
-    <tr class="panel-head">
-      <td>
-        <h4>Federal Events</h4>
-      </td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <p><a href="https://www.eventbrite.com/e/webinars-for-2016-prospective-ced-applicants-tickets-21429685767">Webinars for Prospective Community Economic Development (CED) Program Applicants</a></p>
-        <ul>
-        <li>CED Program Overview Webinar March 3, 2-3 pm Eastern</li>
-        <li>2016 CED and CED-HFFI Funding Opportunity Announcements Webinar, March 10, 2-3 pm Eastern</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<% if param_exists? 'federal-events' %>
+  <!-- STRIP: Begin Federal Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>Federal Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= params['federal-events'] %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
 
 <%= hr %>
 
-<!-- STRIP: Begin Member News -->
-<h2>Member News</h2>
+<% if param_exists? 'member-news' %>
+  <!-- STRIP: Begin Member News -->
+  <h2>Member News</h2>
+  <%= params['member-news'] %>
+<% end %>
 
-<h3>Payday Lending Expansion Thwarted In Indiana</h3>
-<p>The Indiana Association of Community Economic Development (IACED) worked with a broad coalition to <a href="http://www.iaced.org/2016/02/proposed-expansion-of-payday-lending-fails-in-senate-committee/">beat back a move to authorize a new type of payday lending</a> in the Indiana General Assembly. The Assembly was considering authorizing six-month loans of up to $1,000 at an APR of 180%. IACED's board chair and policy director testified at the hearing. Policy Director Kathleen Taylor highlighted the payday lending alternative that IACED is bringing to Indiana. The Community Loan Center program allows local lenders to make online loans directly to employees of participating employers. In contrast to steep payday lending rates, these loans carry an interest rate of 18% with a $20 origination fee and a loan term of up to 52 weeks. The JPMorgan Chase Foundation provided the seed money to bring this payday lending alternative to Indiana from Texas.</p>
-
-<h3>Tax On Short-Term Rentals Will Fund Affordable Housing In Oakland</h3>
-<p>As the result of months of advocacy by members of the East Bay Housing Organizations (EBHO), the Oakland City Council allocated a portion of the Transient Occupancy Tax <a href="http://www.ebho.org/news/161-ebho-wins-funds-from-short-term-rentals-for-affordable-homes-in-oakland">revenue from short-term rentals to the City's Affordable Housing Trust Fund</a> on February 2. The goal is to help mitigate the impact of the short-term rental industry as the City begins to explore policy solutions addressing this issue. EBHO issued <a href="http://www.ebho.org/news/160-new-ebho-report-short-term-rentals-and-the-oakland-housing-market">Impact of Short Term Rentals on Affordable Housing in Oakland: A Report and Recommendations</a>.</p>
-
-<!-- STRIP: Begin Member Events Panel -->
-<table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
-  <thead>
-    <tr class="panel-head">
-      <td>
-        <h4>Member Events</h4>
-      </td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <p><a href="http://www.housingconsortium.org/events/hdc-celebration/">Housing Development Consortium of Seattle and King County Celebration</a><br/>March 29 | Seattle, WA</p>
-        <%= hr %>
-        <p><a href="http://www.tacdc.org/annual-conference-1.html">Texas Association of CDCs Annual Conference</a><br>April 10-12 | South Padre Island, TX<br>
-        Optional <a title="docx" href="http://files.ctctcdn.com/ed94ff28001/141f25a0-5311-4920-9eee-3aceaad65517.docx">Building Financial Sustainability 1-Day Workshop</a> (download .docx) facilitated by the Nonprofit Finance Fund on April 13</p>
-        <%= hr %>
-        <p><a href="http://rural.cedam.info/conference/">  Michigan Small Town and Rural Development Conference</a><br>April 11-13 | Thompsonville, MI</p>
-        <%= hr %>
-        <p><a href="http://www.anhd.org/">Association for Neighborhood & Housing Development Conference</a><br>April 11 | New York, NY</p>
-        <%= hr %>
-        <p><a href="http://www.housingca.org/#%21annual-conference/c1v9k">Housing California 2016 Annual Conference</a><br>April 12-14 | Sacramento, CA</p>
-        <%= hr %>
-        <p><a href="https://www3.thedatabank.com/dpg/521/mtgdetail.asp?formid=event&caleventid=29579">Philadelphia Association of CDCs Annual Gala & Awards</a><br>April 21 | Philadelphia, PA</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<!-- STRIP: End panel -->
+<% if param_exists? 'member-events' %>
+  <!-- STRIP: Begin Member Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>Member Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= params['member-events'] %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- STRIP: End panel -->
+<% end %>
 
 <%= hr %>
 
-<!-- STRIP: Begin Partner News -->
-<h2>Partner News</h2>
+<% if param_exists? 'partner-news' %>
+  <!-- STRIP: Begin Partner News -->
+  <h2>Partner News</h2>
+  <%= params['partner-news'] %>
+<% end %>
 
-<h3>Diane Yentel To Lead National Low Income Housing Coalition</h3>
-<p>Diane Yentel, veteran affordable housing policy expert and advocate, <a href="http://nlihc.org/press/releases/6510">has been named as President and CEO</a> of the National Low Income Housing Coalition (NLIHC). She will replace Sheila Crowley, who is retiring from the position. The transition will take place in April.</p>
-
-<h3>National CAPACD Releases Report On Their First 15 Years</h3>
-<p>The National Coalition for Asian Pacific American Community Development (National CAPACD) released <a href="http://www.nationalcapacd.org/2015/">Moving Forward, Rising Together</a>, a report showing how their coalition of nearly 100 organizations has worked to promote economic vitality, civic and political integration, and racial equity since 2001. The report spotlights CAPACD members and explains how their coalition has collectively improved the lives of two million low-income Asian Americans.</p>
-
-<!-- STRIP: Begin Partner Events Panel -->
-<table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
-  <thead>
-    <tr class="panel-head">
-      <td>
-        <h4>Partner Events</h4>
-      </td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <p>NACCED Webinar:<br>
-          <a href="https://attendee.gotowebinar.com/register/2429324035130716931">Early Experiences in AFH Implementation</a><br>
-          March 3</p>
-        <%= hr %>
-        <p>CFED Capitol Hill Policy Forum:<br>
-          <a href="http://vitaworkscfed.eventgrid.com/">The Impact of Tax Time Issues on Low-Wage Workers Nationwide</a><br>
-          March 15 | Washington, DC</p>
-        <%= hr %>
-        <p>NCRC Conference:<br>
-          <a href="http://www.ncrc.org/conference/">Creating a Just Economy</a><br>
-          March 16-19 | Washington, DC</p>
-        <%= hr %>
-        <p>NLIHC Policy Forum:<br>
-          <a href="http://www.nlihcforum.org/">Overcoming Housing Policy, Achieving Housing Justice</a><br>  April 3-5 | Washington DC</p>
-        <%= hr %>
-        <p>NHC Convening:<br>
-          <a href="http://www.nhc.org/#%21solutions-convenings/hv1dn">Solutions for Housing Communications</a><br>
-          April 28-29 | New York, NY</p>
-        <%= hr %>
-        <p>NALCAB National Training:<br>
-          <a href="https://nalcabbreakingground.topi.com/">Breaking Ground</a><br>
-          May 23-26 | Dallas, TX</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<!-- STRIP: End panel -->
+<% if param_exists? 'parter-events' %>
+  <!-- STRIP: Begin Partner Events Panel -->
+  <table cellpadding="10" cellspacing="0" border="0" cellspacing="0" border="0" class="panel">
+    <thead>
+      <tr class="panel-head">
+        <td>
+          <h4>Partner Events</h4>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <%= params['partner-events'] %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- STRIP: End panel -->
+<% end %>
 
 <%= hr %>
 
-<h2>Job Postings</h2>
-
-<p><a href="http://www.fenwaycdc.org/job-opportunities.html">Director of Real Estate</a> for Fenway CDC in Boston, MA</p>
-
-<p><em>To post a job opportunity, contact <a href="mailto:sgunther@naceda.org">Suzanne Gunther</a>. A $25 donation is suggested.</em></p>
-
-<%= hr %>
+<% if param_exists? 'jobs' %>
+  <h2>Job Postings</h2>
+  <%= params['jobs'] %>
+  <p><em>To post a job opportunity, contact <a href="mailto:sgunther@naceda.org">Suzanne Gunther</a>. A $25 donation is suggested.</em></p>
+  <%= hr %>
+<% end %>
 
 <h2>Funding Opportunities</h2>
 <p>Go to our website for current grant opportunities. The're updated throughout the month.</p>
