@@ -48,12 +48,12 @@
       </div>
     </fieldset>
     <fieldset>
-      <button type="submit">Save for later</button>
+      <button type="submit">Step 1: Save</button>
       <p class="instructions"><strong>Important:</strong> Come back to this exact same URL to pick up where you left off. Your answers have been saved <em>in the URL</em>.</p>
       <textarea disabled rows="5" id="url">/form-news?<%= URI.encode_www_form(params) %></textarea>
     </fieldset>
     <fieldset>
-      <button><a href="/templates/news?<%= URI.encode_www_form(params) %>">Preview and get code</a></button>
+      <button><a href="/templates/news?<%= URI.encode_www_form(params) %>">Step 2: Preview and get code</a></button>
     </fieldset>
   </form>
 </main>

@@ -58,9 +58,7 @@ h3 {
 
 a {
   color: $blue;
-  &:hover {
-    text-decoration: underline !important;
-  }
+  text-decoration: underline;
 }
 
 li {

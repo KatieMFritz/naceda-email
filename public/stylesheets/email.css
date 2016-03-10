@@ -212,9 +212,8 @@ h3 {
   margin-top: .5em; }
 
 a {
-  color: #085694; }
-  a:hover {
-    text-decoration: underline !important; }
+  color: #085694;
+  text-decoration: underline; }
 
 li {
   margin-bottom: 10px; }

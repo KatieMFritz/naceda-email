@@ -2,6 +2,11 @@
   <div id="preview" class="column">
     <h2>Preview</h2>
     <p class="instructions">To make changes, <a href="/form-<%= params[:template] %>?<%= URI.encode_www_form(params) %>">go back to your form</a>.</p>
+    <ul>
+      <li><strong>Subject:</strong> <%= params[:subject] %></li>
+      <li><strong>Author:</strong> <%= params[:author] %></li>
+      <li><strong>Teaser Text:</strong> <%= params[:teaser_text] %></li>
+    </ul>
     <iframe src="<%= @preview_url %>"></iframe>
   </div>
   <div id="code" class="column">

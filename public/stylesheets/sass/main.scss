@@ -7,6 +7,14 @@ body {
   color: $dark-gray;
 }
 
+h1 {
+  color: $blue;
+}
+
+h2 {
+  color: $green;
+}
+
 a {
   color: $blue;
 }
@@ -14,6 +22,7 @@ a {
 // Flexbox setup
 .row {
   display: flex;
+  margin: -10px;
 }
 
 .column {
@@ -23,12 +32,17 @@ a {
 
 iframe {
   width: 100%;
+  min-width: 600px;
   height: 1200px;
 }
 
 .instructions {
   font-size: 1.2em;
   color: red;
+}
+
+textarea[disabled], input[disabled] {
+  background-color: $light-gray;
 }
 
 form {
@@ -70,4 +84,8 @@ form {
 
 #url {
   width: 100%;
+}
+
+footer {
+  background-color: $light-gray;
 }

@@ -1,7 +1,7 @@
 <h1>NACEDA Email Generator</h1>
-<h2>View emails</h2>
+<h2>Pick a template:</h2>
 <ul>
   <% @files.each do |file| %>
-    <li><a href="/templates/<%= file %>"><%= file %></a></li>
+    <li><a href="/form-<%= file %>"><%= file %></a></li>
   <% end %>
 </ul>
