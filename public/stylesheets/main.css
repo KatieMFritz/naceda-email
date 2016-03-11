@@ -5830,6 +5830,15 @@ a {
   text-decoration: none;
   color: white; }
 
+.btn span.glyphicon {
+  margin: 0 5px; }
+
+#copy-code {
+  font-size: 1.2em;
+  height: 50px;
+  padding: 0 30px;
+  margin-bottom: 20px; }
+
 form .column textarea {
   min-width: 400px;
   vertical-align: top; }
