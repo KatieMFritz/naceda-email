@@ -43,6 +43,9 @@ IMPORT BOOTSTRAP
 *****************************/
 @import 'bootstrap';
 
+a {
+  font-weight: bold;
+}
 // Flexbox setup
 .row {
   display: flex;

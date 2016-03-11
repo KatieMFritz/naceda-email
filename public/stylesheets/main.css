@@ -5802,6 +5802,9 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+a {
+  font-weight: bold; }
+
 .row {
   display: flex;
   margin: -10px; }

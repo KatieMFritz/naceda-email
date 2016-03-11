@@ -28,6 +28,10 @@ class NacedaEmailTemplateGenerator < Sinatra::Base
     erb :'/forms/form-news', layout: :'layouts/main'
   end
 
+  get '/help' do
+    erb :'help', layout: :'layouts/main'
+  end
+
   helpers ActionView::Helpers::AssetTagHelper
   helpers Sinatra::ContentFor
   helpers do
