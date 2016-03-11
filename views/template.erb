@@ -22,7 +22,7 @@
     <h2>Preview</h2>
     <div class="alert alert-info" role="alert">
       <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-      To make changes, <a href="/form-<%= params[:template] %>?<%= URI.encode_www_form(params) %>">go back to your form</a>.
+      To make changes, <a href="/form/<%= params[:template] %>?<%= URI.encode_www_form(params) %>">go back to your form</a>.
     </div>
     <iframe src="<%= @preview_url %>"></iframe>
   </div>
