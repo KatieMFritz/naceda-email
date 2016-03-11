@@ -1,14 +1,12 @@
-<div class="row">
-  <div id="preview" class="column">
-    <h2>Preview</h2>
-    <div class="alert alert-info" role="alert">
-      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-      To make changes, <a href="/form-<%= params[:template] %>?<%= URI.encode_www_form(params) %>">go back to your form</a>.
-    </div>
+<% content_for :page_title do %>
+  <% if param_exists? 'subject' %>
+    : <%= params[:subject] %>
+  <% end %>
+<% end %>
+
+<% content_for :page_header do %>
+  <div id="metadata">
     <ul>
-      <% if param_exists? 'subject' %>
-        <li><strong>Subject:</strong> <%= params[:subject] %></li>
-      <% end %>
       <% if param_exists? 'author' %>
         <li><strong>Author:</strong> <%= params[:author] %></li>
       <% end %>
@@ -16,6 +14,16 @@
         <li><strong>Teaser Text:</strong> <%= params[:teaser_text] %></li>
       <% end %>
     </ul>
+  </div>
+<% end %>
+
+<div class="row">
+  <div id="preview" class="column">
+    <h2>Preview</h2>
+    <div class="alert alert-info" role="alert">
+      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      To make changes, <a href="/form-<%= params[:template] %>?<%= URI.encode_www_form(params) %>">go back to your form</a>.
+    </div>
     <iframe src="<%= @preview_url %>"></iframe>
   </div>
   <div id="code" class="column">
