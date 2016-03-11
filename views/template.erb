@@ -6,9 +6,15 @@
       To make changes, <a href="/form-<%= params[:template] %>?<%= URI.encode_www_form(params) %>">go back to your form</a>.
     </div>
     <ul>
-      <li><strong>Subject:</strong> <%= params[:subject] %></li>
-      <li><strong>Author:</strong> <%= params[:author] %></li>
-      <li><strong>Teaser Text:</strong> <%= params[:teaser_text] %></li>
+      <% if param_exists? 'subject' %>
+        <li><strong>Subject:</strong> <%= params[:subject] %></li>
+      <% end %>
+      <% if param_exists? 'author' %>
+        <li><strong>Author:</strong> <%= params[:author] %></li>
+      <% end %>
+      <% if param_exists? 'teaser_text' %>
+        <li><strong>Teaser Text:</strong> <%= params[:teaser_text] %></li>
+      <% end %>
     </ul>
     <iframe src="<%= @preview_url %>"></iframe>
   </div>
