@@ -5840,10 +5840,10 @@ form .column input[type="text"] {
   background-color: #97CA41; }
   .panel-default > .panel-heading a:after {
     font-family: 'Glyphicons Halflings';
-    content: "\e114";
+    content: "\2212";
     float: right; }
   .panel-default > .panel-heading a.collapsed:after {
-    content: "\e080"; }
+    content: "\2b"; }
 
 textarea[disabled] {
   background-color: #f1f1f2; }

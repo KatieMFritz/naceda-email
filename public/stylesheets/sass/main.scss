@@ -73,10 +73,6 @@ a {
   color: $brand-warning;
 }
 
-// textarea[disabled], input[disabled] {
-//   background-color: $light-gray;
-// }
-
 .panel, .alert {
   button, .btn {
     a, a:hover {
@@ -102,12 +98,12 @@ form {
   background-color: $green;
   a:after {
     font-family:'Glyphicons Halflings';
-    content:"\e114";
+    content:"\2212";
     float: right;
-    //color: $gray;
   }
   a.collapsed:after {
-    content:"\e080";
+    //content:"\e080";
+    content:"\2b";
   }
 }
 
