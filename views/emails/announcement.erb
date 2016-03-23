@@ -1,5 +1,5 @@
 <% content_for :page_title do %>
-  People & Places
+  Announcement
 <% end %>
 
 <% content_for :teaser_text do %>
@@ -7,19 +7,14 @@
 <% end %>
 
 <% content_for :banner_image do %>
-  https://naceda.memberclicks.net/assets/images/Email_Banners/naceda_pplplaces.jpg
+  https://naceda.memberclicks.net/assets/images/Email_Banners/naceda_heroheader.jpg
 <% end %>
 
 <% content_for :banner_alt do %>
-  People & Places
+  Announcement from NACEDA
 <% end %>
 
-<% content_for :banner_title do %>
-  <h1>People <span class="small">&</span> Places</h1>
-  <p class="tagline">Improving Neighborhoods and Creating Opportunity</p>
-<% end %>
-
-<!-- STRIP: Begin People & Places -->
+<!-- STRIP: Begin Announcement -->
 <h2><%= params['headline'] %></h2>
 <p class="author">by <%= params['author'] %></h3>
 
@@ -34,9 +29,9 @@
     </tbody>
   </table>
   <!-- STRIP: End panel -->
-  
+
 <div id="story">
-  <img class="people-places" src="<%= params['image-link'] %>">
+  <img src="<%= params['image-link'] %>">
   <%= params['story'] %>
 </div>
 
