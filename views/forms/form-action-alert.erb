@@ -1,0 +1,45 @@
+<% content_for :page_title do %>
+  Create an Action Alert
+<% end %>
+
+<!-- form and opening panel group are in the layout -->
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-target="#collapseGeneral" href="#collapseGeneral">
+            General Email Information</a></h4>
+      </div>
+      <div id="collapseGeneral" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <div class="row">
+            <%= textbox "Email Date", "date" %>
+            <%= textbox "Teaser Text", "teaser_text" %>
+          </div>
+          <div class="row">
+            <%= textbox "Subject Line", "subject" %>
+            <%= textbox "Author", "author" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-target="#collapseNews" href="#collapseNews">
+            Action Alert Text</a></h4>
+      </div>
+      <div id="collapseNews" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <div class="row">
+            <%= textbox "Headline", "headline" %>
+            <%= textbox "Subheading", "subheading" %>
+          </div>
+          <div class="row">
+            <%= textarea "Introduction (briefly explain the issue)", "intro" %>
+            <%= textarea "Take Action (what should the reader do now?)", "take-action" %>
+          </div>
+        </div>
+      </div>
+    </div>

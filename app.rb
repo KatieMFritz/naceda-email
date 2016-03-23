@@ -24,8 +24,10 @@ class NacedaEmailTemplateGenerator < Sinatra::Base
     emailify params[:template]
   end
 
-  get '/form/news' do
-    erb :'/forms/form-news', layout: :'layouts/main'
+  get '/form/:template' do
+    erb :'layouts/form', layout: :'layouts/main' do
+      erb :"/forms/form-#{params[:template]}"
+    end
   end
 
   get '/help' do
