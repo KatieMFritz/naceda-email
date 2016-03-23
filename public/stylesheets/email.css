@@ -206,7 +206,7 @@ h3 {
   margin-top: 1.8em;
   margin-bottom: 0; }
 
-.subtitle {
+.subtitle, .author {
   color: #97CA41 !important;
   font-style: italic;
   margin-top: .5em; }
@@ -217,6 +217,13 @@ a {
 
 li {
   margin-bottom: 10px; }
+
+#story {
+  margin: 20px 0px; }
+  #story img {
+    max-width: 33%;
+    float: left;
+    margin: 0px 10px 10px 0px; }
 
 .hr {
   width: 100%;

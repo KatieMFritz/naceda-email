@@ -1,0 +1,33 @@
+<% content_for :page_title do %>
+  People & Places
+<% end %>
+
+<% content_for :teaser_text do %>
+  <%= params['teaser_text'] %>
+<% end %>
+
+<% content_for :banner_image do %>
+  https://naceda.memberclicks.net/assets/images/Email_Banners/naceda_pplplaces.jpg
+<% end %>
+
+<% content_for :banner_alt do %>
+  People & Places
+<% end %>
+
+<% content_for :banner_title do %>
+  <h1>People <span class="small">&</span> Places</h1>
+  <p class="tagline">Improving Neighborhoods and Creating Opportunity</p>
+<% end %>
+
+<!-- STRIP: Begin People & Places -->
+<h2><%= params['headline'] %></h2>
+<p class="author">by <%= params['author'] %></h3>
+
+<div id="story">
+  <img class="people-places" src="<%= params['image-link'] %>">
+  <%= params['story'] %>
+</div>
+
+<p><strong><a href="<%= params['link'] %>">Read more...</a></strong>
+
+<%= hr %>
