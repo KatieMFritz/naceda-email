@@ -10,7 +10,7 @@
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
     <strong>Important:</strong> Your inputs have been saved to this URL. Bookmark this page or copy and paste the URL to pick up where you left off.</p>
-    <textarea disabled rows="3" id="url">/form/<%= params[:template] %>?<%= URI.encode_www_form(params) %></textarea>
+    <textarea disabled rows="3" id="url">https://agile-shore-23218.herokuapp.com/form/<%= params[:template] %>?<%= URI.encode_www_form(params) %></textarea>
     <button class="btn btn-primary" id="bookmarkme"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>     Bookmark this page</button>
     <button class="btn btn-primary"><a href="/templates/<%= params[:template] %>?<%= URI.encode_www_form(params) %>">
       Step 2: Preview and get code
